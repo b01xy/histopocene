@@ -1,7 +1,86 @@
-#N canvas 70 381 753 581 10;
+#N canvas 558 101 1253 926 10;
+#X obj 843 348 gemwin 25;
+#X msg 875 245 dimen 800 600 \, border 1 \, create \, 1;
+#X msg 879 283 destroy;
+#X obj 919 346 cnv 15 250 350 empty empty empty 20 12 0 14 -228992
+-66577 0;
+#X obj 921 377 cnv 15 155 250 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 921 749 pix_texture;
+#X obj 933 382 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 1006 346 open a supported;
+#X text 1010 359 movie-clip;
+#X obj 946 576 unpack 0 0 0;
+#X floatatom 936 599 5 0 0 3 length - -, f 5;
+#X floatatom 985 599 5 0 0 3 width - -, f 5;
+#X obj 990 557 bng 15 250 50 0 empty empty end_reached 20 7 0 10 -262144
+-1 -1;
+#X floatatom 1003 536 0 0 10000 2 frame# - -;
+#X obj 933 411 openpanel;
+#X msg 933 431 open \$1;
+#X obj 921 540 pix_film;
+#X msg 842 191 dimen 1280 1024 \, border 1 \, create \, 1;
+#X obj 25 151 r mesure;
+#X floatatom 21 247 5 0 0 0 - - -, f 5;
+#X obj 921 352 gemhead 99;
+#X obj 921 722 alpha;
+#X msg 861 217 dimen 1024 768 \, offset 1920 0 \, border 0 \, create
+\, 1;
+#X obj 64 764 int;
+#X obj 710 605 metro 10;
+#X obj 710 580 loadbang;
+#X obj 710 632 t b b;
+#X obj 745 657 s \$0-link;
+#X obj 710 683 s \$0-mass;
+#X obj 21 309 link \$0-link 0 1 1;
+#X obj 21 357 link \$0-link 0 1 1;
+#X obj 22 408 link \$0-link 0 1 1;
+#X obj 23 459 link \$0-link 0 1 1;
+#X obj 24 508 link \$0-link 0 1 1;
+#X obj 24 558 link \$0-link 0 1 1;
+#X obj 24 608 link \$0-link 0 1 1;
+#X obj 23 660 link \$0-link 0 1 1;
+#X obj 21 333 mass \$0-mass 30;
+#X obj 22 383 mass \$0-mass 30;
+#X obj 23 434 mass \$0-mass 30;
+#X obj 23 484 mass \$0-mass 30;
+#X obj 24 533 mass \$0-mass 30;
+#X obj 24 583 mass \$0-mass 30;
+#X obj 24 632 mass \$0-mass 30;
+#X obj 262 351 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 366 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 381 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 396 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 411 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 426 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 441 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 262 456 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 12700 1;
+#X obj 372 481 loadbang;
+#X msg 364 503 64;
+#X text 409 332 <- move here;
+#X text 408 453 <- diferents link to this points;
+#X msg 213 608 setLmax 300 \, setL 0 \, setLmin 0 \, setK 0 \, setD
+10;
+#X obj 211 575 loadbang;
+#X floatatom 1028 599 5 0 0 3 height - -, f 5;
+#X obj 1071 759 * 1080;
+#X floatatom 1055 701 5 0 0 0 - - -, f 5;
+#X obj 1066 730 / 1440;
+#X obj 921 771 rectangle 5.334 4;
+#X obj 921 697 colorRGB 1 1 1 1;
+#N canvas 605 134 1037 863 kinect 0;
 #X obj 113 117 gemhead;
 #X msg 462 25 destroy;
-#N canvas 292 81 827 305 properties 1;
+#N canvas 292 81 827 305 properties 0;
 #X obj 95 235 outlet;
 #X obj 3 -6 cnv 15 140 220 empty empty empty 20 12 0 14 -204800 -66577
 0;
@@ -11,7 +90,7 @@
 #X floatatom 8 155 5 0 0 0 - - -, f 5;
 #X msg 85 178 angle \$1;
 #X obj 85 23 vsl 15 128 -30 30 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6432 1;
+-1 -1 7197 1;
 #X floatatom 85 159 5 0 0 0 - - -, f 5;
 #X text 24 73 GREEN;
 #X text 25 57 OFF;
@@ -118,6 +197,7 @@
 #X msg 483 35 2;
 #X obj 162 20 loadbang;
 #X msg 85 -2 4;
+#X obj 275 55 r film-view;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
@@ -143,8 +223,8 @@
 #X connect 47 0 6 0;
 #X restore 21 105 pd properties;
 #X text -3 49 depends on libfreenect;
-#X obj 30 264 pix_texture;
-#X obj 30 315 rectangle 2 1.5;
+#X obj -18 263 pix_texture;
+#X obj -18 314 rectangle 2 1.5;
 #X obj 171 231 pix_texture;
 #X obj 230 105 gemhead;
 #N canvas 667 445 450 300 pix_info 0;
@@ -184,7 +264,7 @@
 #X connect 1 4 2 0;
 #X connect 1 5 6 0;
 #X connect 1 6 7 0;
-#X restore 30 343 pd pix_info;
+#X restore -18 342 pd pix_info;
 #X text 347 110 2nd argument: activate RGB stream;
 #X text 347 127 3rd argument: activate DEPTH stream;
 #X text 348 143 4th argument: activate AUDIO stream;
@@ -200,7 +280,7 @@
 #X obj -52 84 tgl 15 0 empty empty accel 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -52 106 metro 500;
-#N canvas -272 580 857 435 distance_measurement 1;
+#N canvas 366 370 857 435 distance_measurement 0;
 #X obj 112 42 inlet;
 #X obj 22 89 pix_data;
 #X floatatom 161 53 5 0 0 0 - - -, f 5;
@@ -220,7 +300,7 @@
 ;
 #X obj 8 296 / 100;
 #X obj 8 350 nbx 5 60 -1e+37 1e+37 0 0 empty empty m 300 22 0 60 -262144
--1 -1 0.586121 256;
+-1 -1 -0.0535519 256;
 #X text 89 87 output pixel rgb value;
 #X text 126 139 r g b;
 #X text 117 200 second and first 8 bits;
@@ -232,7 +312,7 @@
 #X text 339 64 (from depth image);
 #X text 40 23 ON/OFF;
 #X obj 487 259 nbx 5 60 -1e+37 1e+37 0 0 empty empty m 300 22 0 60
--262144 -1 -1 0.529067 256;
+-262144 -1 -1 7.16499 256;
 #X obj 487 205 / 1000;
 #X obj 161 6 loadbang;
 #X text 230 9 for distance measurement use !!!raw depth output!!!;
@@ -244,12 +324,11 @@
 #X obj 613 80 colorRGB 1 0 0;
 #X obj 610 157 circle 0.1;
 #X obj 615 46 gemhead 993;
-#X obj 405 375 s mesure;
+#X obj 365 344 s mesure;
 #X text 495 376 0.43 m > 4 \, 8 m;
-#X floatatom 601 352 5 0 0 0 - - -, f 5;
-#X obj 662 388 del 500;
-#X obj 416 341 line \$1 500;
 #X obj 362 312 speedlim 50;
+#X obj 487 347 s distRaw;
+#X obj 615 8 r point-rouge;
 #X connect 0 0 1 1;
 #X connect 1 1 4 0;
 #X connect 2 0 1 2;
@@ -269,18 +348,19 @@
 #X connect 14 0 1 0;
 #X connect 15 0 14 0;
 #X connect 16 0 17 0;
+#X connect 28 0 43 0;
 #X connect 29 0 28 0;
-#X connect 29 0 45 0;
+#X connect 29 0 42 0;
 #X connect 30 0 8 0;
 #X connect 36 0 15 0;
 #X connect 37 0 38 0;
 #X connect 39 0 37 0;
-#X connect 44 0 42 0;
-#X connect 45 0 40 0;
+#X connect 42 0 40 0;
+#X connect 44 0 39 0;
 #X restore 171 339 pd distance_measurement;
 #X text 112 98 gemhead for rgb;
 #X text 227 85 and for depth;
-#X text 72 219 rgb;
+#X text 24 218 rgb;
 #X text 172 215 depth;
 #X text 382 328 under osx;
 #X msg 101 76 bang;
@@ -308,7 +388,7 @@
 #X connect 2 0 0 0;
 #X restore 157 181 pd audio;
 #X text 140 73 audio output;
-#N canvas 176 433 455 231 acceleration 0;
+#N canvas 176 433 752 460 acceleration 0;
 #X obj 71 34 inlet;
 #X obj 71 56 route accel tilt_angle;
 #X floatatom 135 87 5 0 0 0 - - -, f 5;
@@ -338,7 +418,7 @@ to get video stream started -> i'll work on this;
 #X text -26 1 pix_freenect 0.04 experimental!!;
 #X text 347 93 1st argument: Kinect id or serial eg. A00362807917045A
 ;
-#N canvas 0 50 364 224 init_trick 0;
+#N canvas 3 54 424 255 init_trick 0;
 #X obj 131 39 route 1;
 #X obj 131 9 route gem_state;
 #X obj 131 69 delay 500;
@@ -375,8 +455,8 @@ to get video stream started -> i'll work on this;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 6 0 7 0;
-#X restore 30 239 pd transp;
-#X obj 30 285 translateXYZ -2.5 2 0;
+#X restore -18 238 pd transp;
+#X obj -18 284 translateXYZ -2.5 2 0;
 #X text -28 19 (C)2011/2012 Matthias Kronlachner;
 #X obj 171 258 translateXYZ 0 0 0;
 #X obj 171 282 rectangle 5.334 4;
@@ -395,6 +475,7 @@ to get video stream started -> i'll work on this;
 #X connect 23 0 21 0;
 #X connect 30 0 39 0;
 #X connect 38 0 39 0;
+#X connect 39 0 40 0;
 #X connect 39 1 6 0;
 #X connect 39 2 31 0;
 #X connect 39 3 31 1;
@@ -408,3 +489,124 @@ to get video stream started -> i'll work on this;
 #X connect 43 0 44 0;
 #X connect 44 0 8 0;
 #X connect 45 0 46 0;
+#X restore 646 50 pd kinect;
+#X obj 9 61 nbx 5 60 -1e+37 1e+37 0 0 empty empty m 300 22 0 60 -262144
+-1 -1 7.16499 256;
+#X obj 10 13 r distRaw;
+#X msg 947 468 open ./SCENETEST.mov;
+#X obj 455 45 tgl 30 0 point-rouge empty Point_rouge -19 -15 0 14 -258113
+-1 -1 0 1;
+#X obj 809 130 loadbang;
+#X obj 809 156 del 1000;
+#X obj 809 426 del 500;
+#X obj 921 666 spigot;
+#X obj 463 144 tgl 30 1 film-view empty film-view -19 -12 0 14 -4034
+-1 -1 1 1;
+#X obj 35 866 hsl 400 15 0 32399 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 168 889 int;
+#X obj 64 734 maxlib/scale 0 127 0 32400;
+#X obj 64 800 moses 32399;
+#X obj 965 640 r film-view;
+#X msg 655 149 1;
+#X msg 657 109 0;
+#X obj 245 270 nbx 5 60 0 1e+37 0 0 empty empty empty 300 22 0 60 -262144
+-1 -1 0 256;
+#X obj 21 219 moses 4.7;
+#X obj 21 274 maxlib/scale 4.7 0.6 0 127;
+#X obj 23 188 moses 0.6;
+#X obj 411 200 nbx 5 60 -1e+37 1e+37 0 0 empty empty empty 300 22 0
+60 -262144 -1 -1 4.78 256;
+#X obj 142 174 expr if (($f1 >> 4.5) \, 4.7 \, $f1);
+#X floatatom 283 141 5 0 0 0 - - -, f 5;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 5 0 62 0;
+#X connect 6 0 14 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 9 2 58 0;
+#X connect 13 0 16 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 72 0;
+#X connect 16 1 9 0;
+#X connect 16 2 12 0;
+#X connect 17 0 0 0;
+#X connect 18 0 84 0;
+#X connect 19 0 83 0;
+#X connect 20 0 16 0;
+#X connect 21 0 5 0;
+#X connect 22 0 0 0;
+#X connect 23 0 77 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 28 0;
+#X connect 26 1 27 0;
+#X connect 29 1 37 0;
+#X connect 30 0 37 0;
+#X connect 30 1 38 0;
+#X connect 31 0 38 0;
+#X connect 31 1 39 0;
+#X connect 32 0 39 0;
+#X connect 32 1 40 0;
+#X connect 33 0 40 0;
+#X connect 33 1 41 0;
+#X connect 34 0 41 0;
+#X connect 34 1 42 0;
+#X connect 35 0 42 0;
+#X connect 35 1 43 0;
+#X connect 36 0 43 0;
+#X connect 37 0 29 1;
+#X connect 37 0 30 0;
+#X connect 37 0 44 0;
+#X connect 38 0 30 1;
+#X connect 38 0 31 0;
+#X connect 38 0 45 0;
+#X connect 39 0 31 1;
+#X connect 39 0 32 0;
+#X connect 39 0 46 0;
+#X connect 40 0 32 1;
+#X connect 40 0 33 0;
+#X connect 40 0 47 0;
+#X connect 41 0 33 1;
+#X connect 41 0 34 0;
+#X connect 41 0 48 0;
+#X connect 42 0 34 1;
+#X connect 42 0 35 0;
+#X connect 42 0 49 0;
+#X connect 43 0 35 1;
+#X connect 43 0 36 0;
+#X connect 43 0 50 0;
+#X connect 43 0 76 0;
+#X connect 51 0 36 1;
+#X connect 52 0 53 0;
+#X connect 53 0 51 0;
+#X connect 56 0 36 0;
+#X connect 57 0 56 0;
+#X connect 59 0 62 2;
+#X connect 60 0 61 0;
+#X connect 60 0 62 1;
+#X connect 61 0 59 0;
+#X connect 63 0 21 0;
+#X connect 66 0 65 0;
+#X connect 67 0 16 0;
+#X connect 69 0 70 0;
+#X connect 70 0 22 0;
+#X connect 70 0 71 0;
+#X connect 70 0 79 0;
+#X connect 70 0 80 0;
+#X connect 71 0 67 0;
+#X connect 72 0 63 0;
+#X connect 74 0 75 0;
+#X connect 76 0 23 0;
+#X connect 77 0 13 0;
+#X connect 78 0 72 1;
+#X connect 79 0 73 0;
+#X connect 80 0 68 0;
+#X connect 81 0 29 0;
+#X connect 82 0 19 0;
+#X connect 83 0 81 0;
+#X connect 84 1 82 0;
+#X connect 86 0 85 0;
+#X connect 87 0 86 0;
